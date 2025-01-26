@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'OpenSans-VariableFont_wdth\,wght';
+    src: url('./OpenSans-VariableFont_wdth\,wght.ttf');
+  }
+
 :root {
     --primary-color: #0A62ff;
     --secondary-color: #00f0ff;
     --primary-background-color: #000000;
     --text-color: #d9d9d9;
-    font-family: sans-serif;
+    --primary-font-family:'Open Sans';
+     
 
 }
 
@@ -21,6 +27,7 @@
     /* align-items: center; */
     /* gap: 20px; */
     height: 150px;
+    
 }
 
 .main .header .logo {
@@ -38,6 +45,7 @@
 
 .banner {
     max-width: 100%;
+    /* padding:  0 0 160px 0 ; */
     height: 100vh;
     background-image: url(./img/bg.png);
     background-size: contain;
@@ -45,15 +53,18 @@
     background-repeat: no-repeat;
 }
 
+
 /* .banner .banner-img{
     background-image: url(./img/bg.png);
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
-    height: 579px;
+    height: 459px;
+
+ 
+  
 } */
 
-.banner .banner-content {}
 
 .banner .banner-content h5 {
     font-size: 16px;
@@ -69,16 +80,18 @@
     font-size: 52px;
     line-height: 56.26px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
+    font-family:var(--primary-font-family);
 }
 
 .banner .banner-content h1 span {
     font-size: 18px;
     color: var(--primary-color);
     font-size: 56px;
-    font-weight: 1000;
+    font-weight: 700;
     font-family: monospace;
     letter-spacing: 0px;
+    font-family:var(--primary-font-family);
 
 }
 
@@ -125,7 +138,7 @@
     height: 46px;
     background: transparent;
     border-radius: 22px;
-    border: 1px solid var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     font-weight: 400;
     font-size: 18px;
     color: var(--secondary-color);
@@ -181,7 +194,8 @@
 .matrix .matrix-inner .matrix-content h2 {
     font-size: 37px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: var(--primary-font-family);
 }
 
 .matrix .matrix-inner .matrix-content p {
@@ -217,6 +231,7 @@
 }
 
 .matrix .matrix-inner .matrix-con2 div p span {
+    font-size: 12px;
     opacity: .7;
     font-weight: lighter;
 
@@ -242,14 +257,12 @@
     right: 100px;
     gap: 0px;
     opacity: 0px;
-
     position: absolute;
     background: radial-gradient(rgba(1, 30, 80, 0.315), rgba(2, 31, 82, 0.333), rgba(2, 31, 82, 0.313));
     box-shadow: 0 0 500px rgba(0, 85, 232, 0.313);
     filter: blur(4px);
     border-radius: 50%;
     filter: blur(4px);
-
     z-index: -1;
 }
 
@@ -271,10 +284,10 @@
 .matrix .about .about-content h1 {
     color: #fff;
     /* font-family: Open Sans; */
-    font-size: 42px;
-    font-weight: 600;
+    font-size: 40px;
+    font-weight: 700;
     line-height: 57.2px;
-
+    font-family: var(--primary-font-family);
 }
 
 .matrix .about .about-content .para1 {
@@ -367,9 +380,10 @@
 
 .rewiew .rewiew-content h1 {
     color: #fff;
-    font-size: 42px;
-    font-weight: 600;
-    line-height: 57.2px;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 48.2px;
+    font-family: var(--primary-font-family);
 
 
 }
@@ -528,6 +542,7 @@
     line-height: 57.2px;
     text-align: center;
     color: #fff;
+    font-family: var(--primary-font-family);
 
 }
 
@@ -588,6 +603,7 @@
     color: #fff;
     font-size: 40px;
     font-weight: 700;
+    font-family: var(--primary-font-family);
 }
 
 .early .early-inner p {
@@ -602,7 +618,7 @@
     height: 46px;
     background: transparent;
     border-radius: 22px;
-    border: 1px solid var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     font-weight: 400;
     font-size: 19px;
     color: var(--secondary-color);
@@ -613,16 +629,13 @@
 .early .early-inner button:hover {
     color: var(--primary-color);
     background: transparent;
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
 }
 
 .early .img {
     width: 400px;
     height: 400px;
-
-
 }
-
 
 /* early access ends */
 
@@ -663,15 +676,18 @@
 z-index: 1;
 box-shadow: 0 0 500px rgba(0, 85, 232, 0.409); */
     background: radial-gradient(rgba(1, 30, 80, 0.315), rgba(2, 31, 82, 0.333), rgba(2, 31, 82, 0.313));
-    z-index: 1;
+    z-index: -1;
     box-shadow: 0 0 500px rgba(0, 85, 232, 0.313);
     filter: blur(4px);
 }
 
-.imp .imp-inner h1 {
+.imp .container .imp-inner h1 {
     font-size: 41px;
     font-weight: 600;
     color: #fff;
+    font-family: var(--primary-font-family);
+    opacity: 1;
+    /* z-index: 99; */
 }
 
 .imp .imp-inner p {
@@ -791,7 +807,8 @@ box-shadow: 0 0 500px rgba(0, 85, 232, 0.409); */
 .pricing .container .pricing-inner h1 {
     font-size: 44px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: var(--primary-font-family);
 }
 
 .pricing .container .pricing-inner p {
@@ -828,7 +845,7 @@ box-shadow: 0 0 500px rgba(0, 85, 232, 0.409); */
     height: 46px;
     background: transparent;
     border-radius: 22px;
-    border: 1px solid var(--secondary-color);
+    border: 2px solid var(--secondary-color);
     font-weight: 400;
     font-size: 18px;
     color: var(--secondary-color);
@@ -921,6 +938,7 @@ box-shadow: 0 0 500px rgba(0, 85, 232, 0.409); */
     color: #fff;
     font-weight: 600;
     text-align: center;
+    font-family: var(--primary-font-family);
 }
 
 .plans .container p {
@@ -1000,6 +1018,7 @@ box-shadow: 0 0 500px rgba(0, 85, 232, 0.409); */
 font-size: 40px;
 color: #fff;
 font-weight: 500;
+font-family: var(--primary-font-family);
 }
 .contact .container .contact-content p{
 font-size: 15px;
